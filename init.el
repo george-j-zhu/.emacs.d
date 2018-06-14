@@ -110,4 +110,9 @@
 (defvar emacs_home (getenv "EMACS_HOME"))
 ;;(setq default-directory emacs_home)
 
+;;; key bind settings
+;;; move multiple lines
+(global-set-key "\M-n" (kbd "C-u 5 C-n"))
+(global-set-key "\M-p" (kbd "C-u 5 C-p"))
+
 ;;; init.el ends here
