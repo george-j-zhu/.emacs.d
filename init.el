@@ -27,7 +27,8 @@
     smart-mode-line
     web-mode
     yaml-mode
-    dockerfile-mode))
+    dockerfile-mode
+    ensime))
 
 (add-to-list 'package-archives
              '("MELPA Stable" . "http://stable.melpa.org/packages/"))
