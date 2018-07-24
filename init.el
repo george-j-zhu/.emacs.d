@@ -20,7 +20,9 @@
     flycheck
     js2-mode
     json-mode
-    magit
+    typescript-mode
+    company
+    tide
     markdown-mode
     py-autopep8
     rainbow-delimiters
@@ -30,11 +32,10 @@
     dockerfile-mode
     ensime))
 
-(add-to-list 'package-archives
-             '("MELPA Stable" . "http://stable.melpa.org/packages/"))
-;; latest repository
-;;(add-to-list 'package-archives
-;;             '("melpa" . "http://melpa.org/packages/"))
+(setq package-archives
+   '(("marmalade" . "http://marmalade-repo.org/packages/")
+     ("melpa" . "http://melpa.org/packages/")
+     ("melpa-stable" . "https://stable.melpa.org/packages/")))
 
 (when (not package-archive-contents)
     (package-refresh-contents))
@@ -57,8 +58,6 @@
       sml/no-confirm-load-theme t
       yas-global-mode 1
       custom-file "~/.emacs.d/custom.el"
-      magit-auto-revert-mode 0
-      magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1
       x-select-enable-clipboard t)
 
 ;; lock and backup file settings(disabled)
@@ -93,9 +92,6 @@
 
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
-
-(require 'magit)
-(global-set-key (kbd "C-c g") 'magit-status)
 
 ;; smart mode line settings
 (sml/setup)
