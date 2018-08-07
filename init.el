@@ -30,7 +30,8 @@
     web-mode
     yaml-mode
     dockerfile-mode
-    ensime))
+    ensime
+    neotree))
 
 (setq package-archives
    '(("marmalade" . "http://marmalade-repo.org/packages/")
@@ -99,6 +100,10 @@
              '("^~/go" ":go:") t)
 (add-to-list 'sml/replacer-regexp-list
              '("^/bitly/src/github.com/bitly/bitly" ":bitly:") t)
+
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(global-set-key [f9] 'neotree-change-root)
 
 (require 'development)
 
