@@ -31,7 +31,8 @@
     yaml-mode
     dockerfile-mode
     ensime
-    neotree))
+    neotree
+    ein))
 
 (setq package-archives
    '(("marmalade" . "http://marmalade-repo.org/packages/")

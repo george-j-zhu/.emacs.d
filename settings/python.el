@@ -20,6 +20,8 @@
 
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
+(require 'ein)
+
 (provide 'python)
 
 ;; python.el ends here
